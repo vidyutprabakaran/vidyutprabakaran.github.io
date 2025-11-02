@@ -61,6 +61,26 @@
             padding: 3rem;
             border-radius: 10px;
         }
+
+        /* Profile picture in header */
+        .header-pfp {
+            width: 140px;
+            height: 140px;
+            border-radius: 16px; /* rounded corners */
+            display: block;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            border: 2px solid rgba(255,255,255,0.04);
+        }
+
+        @media (max-width: 768px) {
+            .header-pfp {
+                width: 100px;
+                height: 100px;
+                border-radius: 12px;
+            }
+        }
         
         .header-bg {
             position: absolute;
@@ -464,6 +484,7 @@
 
     <header>
         <div class="header-content">
+            <img src="pfp.png" alt="Profile picture" class="header-pfp" onerror="this.style.display='none'" />
             <h1>Vidyut Prabakaran</h1>
             <h2>Developer & Car Enthusiast</h2>
             <p>Crafting code and dreaming of engines</p>
