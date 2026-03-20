@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,13 +21,13 @@
             --accent: #f59e0b;
             --gray: #64748b;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--dark);
@@ -34,7 +35,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* Navigation */
         nav {
             position: fixed;
@@ -50,7 +51,7 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
-        
+
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
@@ -59,12 +60,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
         }
-        
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -73,11 +74,11 @@
             font-weight: 500;
             transition: color 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -88,11 +89,11 @@
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             transition: width 0.3s ease;
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         /* Header/Hero Section */
         header {
             height: 100vh;
@@ -106,7 +107,7 @@
             padding: 2rem;
             overflow: hidden;
         }
-        
+
         header::before {
             content: '';
             position: absolute;
@@ -118,7 +119,7 @@
             border-radius: 50%;
             animation: float 8s ease-in-out infinite;
         }
-        
+
         header::after {
             content: '';
             position: absolute;
@@ -130,12 +131,12 @@
             border-radius: 50%;
             animation: float 10s ease-in-out infinite reverse;
         }
-        
+
         .header-content {
             z-index: 2;
             animation: fadeInUp 1s ease-out;
         }
-        
+
         .header-pfp {
             width: 160px;
             height: 160px;
@@ -147,7 +148,7 @@
             box-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
             animation: float 3s ease-in-out infinite;
         }
-        
+
         h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
@@ -156,21 +157,21 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .tagline {
             font-size: 1.4rem;
             color: var(--gray);
             margin-bottom: 2.5rem;
             max-width: 700px;
         }
-        
+
         .cta-buttons {
             display: flex;
             gap: 1.2rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-        
+
         .btn {
             padding: 1rem 2.5rem;
             border-radius: 10px;
@@ -180,41 +181,41 @@
             display: inline-block;
             font-size: 1rem;
         }
-        
+
         .btn-primary {
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: white;
             border: none;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
         }
-        
+
         .btn-outline {
             background: transparent;
             color: var(--light);
             border: 2px solid var(--primary);
         }
-        
+
         .btn-outline:hover {
             background: var(--primary);
             transform: translateY(-3px);
         }
-        
+
         /* Sections */
         section {
             padding: 6rem 8%;
             max-width: 1400px;
             margin: 0 auto;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         h2 {
             font-size: 2.8rem;
             text-align: center;
@@ -224,7 +225,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         .section-title {
             font-size: 2.8rem;
             text-align: center;
@@ -234,12 +235,12 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
+
         /* About Section */
         .about {
             background: var(--dark);
         }
-        
+
         .about p {
             font-size: 1.2rem;
             line-height: 1.9;
@@ -248,7 +249,7 @@
             max-width: 800px;
             margin: 0 auto 1.5rem;
         }
-        
+
         /* Projects Grid */
         .project-grid {
             display: grid;
@@ -256,7 +257,7 @@
             gap: 2.5rem;
             margin-top: 3rem;
         }
-        
+
         .project-card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -266,35 +267,35 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .project-card:hover {
             transform: translateY(-12px);
             box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
             border-color: var(--primary);
         }
-        
+
         .project-card.featured {
             grid-column: span 1;
         }
-        
+
         .project-img {
             width: 100%;
             height: 240px;
             overflow: hidden;
             position: relative;
         }
-        
+
         .project-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
-        
+
         .project-card:hover .project-img img {
             transform: scale(1.08);
         }
-        
+
         .project-content {
             padding: 2rem;
             display: flex;
@@ -302,47 +303,47 @@
             justify-content: space-between;
             flex-grow: 1;
         }
-        
+
         .project-title {
             font-size: 1.6rem;
             margin-bottom: 1rem;
             color: var(--light);
         }
-        
+
         .project-desc p {
             color: var(--gray);
             margin-bottom: 0.8rem;
             line-height: 1.7;
         }
-        
+
         .project-description {
             margin-bottom: 1.5rem;
         }
-        
+
         .project-links {
             display: flex;
             gap: 1rem;
             margin-top: auto;
         }
-        
+
         .project-links .btn {
             padding: 0.75rem 1.8rem;
             font-size: 0.95rem;
         }
-        
+
         /* Contact Section */
         .contact {
             background: var(--dark);
             text-align: center;
         }
-        
+
         .contact p {
             font-size: 1.3rem;
             color: var(--gray);
             margin-bottom: 2rem;
             line-height: 1.8;
         }
-        
+
         .contact-email {
             display: inline-block;
             padding: 1.2rem 3rem;
@@ -356,7 +357,7 @@
             transition: all 0.3s ease;
             margin-top: 1rem;
         }
-        
+
         .contact-email:hover {
             background: var(--primary);
             transform: translateY(-3px);
@@ -389,7 +390,7 @@
             border-color: var(--primary);
             box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
         }
-        
+
         /* Footer */
         footer {
             background: var(--card-bg);
@@ -398,108 +399,207 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             color: var(--gray);
         }
-        
+
         footer p {
             margin: 0;
         }
-        
+
         /* Animations */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-30px) rotate(5deg);
             }
         }
-        
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .project-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 gap: 2rem;
             }
-            
+
             h1 {
                 font-size: 3rem;
             }
-            
+
             .section-title {
                 font-size: 2.2rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             nav {
                 padding: 1rem 4%;
             }
-            
+
             .nav-links {
                 gap: 1.5rem;
             }
-            
+
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             .tagline {
                 font-size: 1.1rem;
             }
-            
+
             .header-pfp {
                 width: 120px;
                 height: 120px;
             }
-            
+
             section {
                 padding: 4rem 5%;
             }
-            
+
             .project-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .project-card.featured {
                 grid-column: span 1;
             }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 width: 100%;
             }
-            
+
             .btn {
                 width: 100%;
                 max-width: 300px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .nav-links {
                 display: none;
             }
-            
+
             h1 {
                 font-size: 2rem;
             }
-            
+
             .section-title {
                 font-size: 1.8rem;
             }
         }
+
+        /* Collab / Worked With Section */
+        .collab-section {
+            background: var(--dark);
+        }
+
+        .collab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            justify-content: start;
+        }
+
+        .collab-grid .collab-card {
+            max-width: 450px;
+        }
+
+        .collab-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .collab-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
+            border-color: var(--primary);
+        }
+
+        .collab-img {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .collab-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .collab-card:hover .collab-img img {
+            transform: scale(1.08);
+        }
+
+        .collab-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .collab-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        .collab-desc {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .collab-role {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .collab-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .collab-links .btn {
+            padding: 0.75rem 1.8rem;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -528,7 +628,9 @@
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>Hi there! I'm Vidyut, a passionate hobbyist programmer with a deep love for both coding and automobiles. When I'm not working on my latest programming project, you can find me reading about car specifications or discussing the newest automotive technologies.</p>
+            <p>Hi there! I'm Vidyut, a passionate hobbyist programmer with a deep love for both coding and automobiles.
+                When I'm not working on my latest programming project, you can find me reading about car specifications
+                or discussing the newest automotive technologies.</p>
         </div>
     </section>
 
@@ -548,18 +650,22 @@
                                 <h3 class="project-title">AI Password Manager</h3>
                                 <div class="project-desc">
                                     <p>Secure Your Digital Life with AI Technology.</p>
-                                    <p>Securely store and manage your passwords with the power of artificial intelligence.</p>
-                                    <p>Protects your digital credentials with advanced encryption and smart features.</p>
+                                    <p>Securely store and manage your passwords with the power of artificial
+                                        intelligence.</p>
+                                    <p>Protects your digital credentials with advanced encryption and smart features.
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://AI-Password-Manager.github.io/" target="_blank" class="btn btn-primary">View Project</a>
-                            <a href="https://github.com/VidyutPrabakaran1/AI-Password-Manager" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://AI-Password-Manager.github.io/" target="_blank"
+                                class="btn btn-primary">View Project</a>
+                            <a href="https://github.com/VidyutPrabakaran1/AI-Password-Manager" target="_blank"
+                                rel="noopener noreferrer" class="btn btn-outline">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Regular projects -->
                 <div class="project-card normal">
                     <div class="project-img">
@@ -573,11 +679,12 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/WL-WhatsApp" target="_blank" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://github.com/VidyutPrabakaran1/WL-WhatsApp" target="_blank"
+                                class="btn btn-outline">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card normal">
                     <div class="project-img">
                         <img src="vivobook-hackintosh.png" alt="VivoBook Hackintosh" />
@@ -586,15 +693,17 @@
                         <div>
                             <h3 class="project-title">Hackintosh EFI</h3>
                             <div class="project-desc">
-                                <p>An OpenCore EFI for running macOS Ventura on the Asus VivoBook 15 X509DA. It also has a higher benchmark score than Windows 11.</p>
+                                <p>An OpenCore EFI for running macOS Ventura on the Asus VivoBook 15 X509DA. It also has
+                                    a higher benchmark score than Windows 11.</p>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/VivoBook-X509DA-Hackintosh-EFI" target="_blank" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://github.com/VidyutPrabakaran1/VivoBook-X509DA-Hackintosh-EFI"
+                                target="_blank" class="btn btn-outline">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card normal">
                     <div class="project-img">
                         <img src="lnc.png" alt="LocalNet Chat" />
@@ -603,15 +712,17 @@
                         <div>
                             <h3 class="project-title">LocalNet Chat</h3>
                             <div class="project-desc">
-                                <p>LocalNet Chat is a program that allows you to quickly and easily set up a chat server on your current network.</p>
+                                <p>LocalNet Chat is a program that allows you to quickly and easily set up a chat server
+                                    on your current network.</p>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/LocalNet-Chat" target="_blank" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://github.com/VidyutPrabakaran1/LocalNet-Chat" target="_blank"
+                                class="btn btn-outline">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card normal">
                     <div class="project-img">
                         <img src="xcli.png" alt="Xcel CLI" />
@@ -620,15 +731,17 @@
                         <div>
                             <h3 class="project-title">Xcel CLI</h3>
                             <div class="project-desc">
-                                <p>Xcel CLI is a simple and lightweight command line interface for creating, editing, and viewing Excel spreadsheets.</p>
+                                <p>Xcel CLI is a simple and lightweight command line interface for creating, editing,
+                                    and viewing Excel spreadsheets.</p>
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/Xcel-CLI" target="_blank" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://github.com/VidyutPrabakaran1/Xcel-CLI" target="_blank"
+                                class="btn btn-outline">GitHub Repo</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="project-card normal">
                     <div class="project-img">
                         <img src="fpdf.png" alt="FusionPDF" />
@@ -641,7 +754,36 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/FusionPDF" target="_blank" class="btn btn-outline">GitHub Repo</a>
+                            <a href="https://github.com/VidyutPrabakaran1/FusionPDF" target="_blank"
+                                class="btn btn-outline">GitHub Repo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborated / Worked With Section -->
+    <section id="collaborated" class="collab-section">
+        <div class="container">
+            <h2 class="section-title">Projects I've Worked With</h2>
+            <div class="collab-grid">
+                <div class="collab-card">
+                    <div class="collab-img">
+                        <img src="ttt.png" alt="The Thinking Teens" />
+                    </div>
+                    <div class="collab-content">
+                        <div>
+                            <h3 class="collab-title">The Thinking Teens</h3>
+                            <p class="collab-desc">We're two teenagers who talk about topics the world should know about
+                                more. Our mission is to bring fresh perspectives to important conversations and spark
+                                meaningful discussions among our generation and beyond.</p>
+                            <br>
+                            <span class="collab-role">Role: Co-founder</span>
+                        </div>
+                        <div class="collab-links">
+                            <a href="https://thethinkingteens.github.io/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-primary">Visit Website</a>
                         </div>
                     </div>
                 </div>
@@ -653,20 +795,23 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <p>Interested in suggesting ideas on a project or just want to chat about programming or cars? I'd love to hear from you!</p>
+            <p>Interested in suggesting ideas on a project or just want to chat about programming or cars? I'd love to
+                hear from you!</p>
             <a href="mailto:vidyutprabakaran@gmail.com" class="contact-email">vidyutprabakaran@gmail.com</a>
             <div class="social-links">
                 <a href="https://vidyutprabakaran.github.io/" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.reddit.com/user/Far_Entrepreneur_811/" target="_blank" rel="noopener noreferrer">Reddit</a>
+                <a href="https://www.reddit.com/user/Far_Entrepreneur_811/" target="_blank"
+                    rel="noopener noreferrer">Reddit</a>
                 <a href="https://x.com/Vidyut737667" target="_blank" rel="noopener noreferrer">Twitter / X</a>
-                <a href="https://discord.com/channels/@VidyutPrabakaran" target="_blank" rel="noopener noreferrer">Discord</a>
+                <a href="https://discord.com/channels/@VidyutPrabakaran" target="_blank"
+                    rel="noopener noreferrer">Discord</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Vidyut Prabakaran. All rights reserved.</p>
+        <p>&copy; 2026 Vidyut Prabakaran. All rights reserved.</p>
     </footer>
 
     <script>
@@ -707,4 +852,5 @@
         });
     </script>
 </body>
+
 </html>
