@@ -2,23 +2,27 @@
 <html lang="en">
 
 <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="xqd1CqpdZuSuk1laTGsthXwmASxGdWZW-cZfXvXdHHM" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Vidyut Prabakaran | Developer</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #16a34a;
-            --dark: #0a0a0a;
-            --card-bg: #1a1a1a;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --dark: #0f1115;
+            --card-bg: #16181d;
+            --border: #2a2d36;
             --light: #f8fafc;
-            --accent: #f59e0b;
-            --gray: #64748b;
+            --muted: #94a3b8;
+            --accent: #eab308;
         }
 
         * {
@@ -28,7 +32,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--dark);
             color: var(--light);
             line-height: 1.6;
@@ -46,161 +50,116 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background-color: rgba(15, 17, 21, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            letter-spacing: -0.02em;
+            color: var(--light);
         }
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .nav-links a {
-            color: var(--light);
+            color: var(--muted);
             text-decoration: none;
-            position: relative;
-            padding: 0.5rem 0;
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            color: var(--light);
         }
 
         /* Header/Hero Section */
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
             text-align: center;
-            padding: 2rem;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.12), transparent);
-            top: -300px;
-            right: -300px;
-            border-radius: 50%;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        header::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(22, 163, 74, 0.12), transparent);
-            bottom: -250px;
-            left: -250px;
-            border-radius: 50%;
-            animation: float 10s ease-in-out infinite reverse;
+            padding: 6rem 2rem 2rem;
         }
 
         .header-content {
             z-index: 2;
-            animation: fadeInUp 1s ease-out;
+            animation: fadeIn 0.8s ease-out;
         }
 
         .header-pfp {
-            width: 160px;
-            height: 160px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             display: block;
             margin: 0 auto 2rem;
             object-fit: cover;
-            border: 4px solid var(--primary);
-            box-shadow: 0 0 40px rgba(37, 99, 235, 0.4);
-            animation: float 3s ease-in-out infinite;
+            border: 1px solid var(--border);
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--light);
         }
 
         .tagline {
-            font-size: 1.4rem;
-            color: var(--gray);
+            font-size: 1.25rem;
+            color: var(--muted);
             margin-bottom: 2.5rem;
-            max-width: 700px;
+            font-weight: 400;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.2rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 10px;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            font-size: 1rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            color: white;
-            border: none;
+            background: var(--light);
+            color: var(--dark);
+            border: 1px solid var(--light);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+            background: #e2e8f0;
+            border-color: #e2e8f0;
         }
 
         .btn-outline {
             background: transparent;
             color: var(--light);
-            border: 2px solid var(--primary);
+            border: 1px solid var(--border);
         }
 
         .btn-outline:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
+            background: var(--card-bg);
+            border-color: var(--muted);
         }
 
         /* Sections */
@@ -211,364 +170,215 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        h2 {
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         .section-title {
-            font-size: 2.8rem;
-            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
             margin-bottom: 3rem;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--dark);
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            line-height: 1.9;
-            color: var(--gray);
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* Projects Grid */
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
-            border-color: var(--primary);
-        }
-
-        .project-card.featured {
-            grid-column: span 1;
-        }
-
-        .project-img {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .project-card:hover .project-img img {
-            transform: scale(1.08);
-        }
-
-        .project-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .project-title {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
             color: var(--light);
         }
 
-        .project-desc p {
-            color: var(--gray);
-            margin-bottom: 0.8rem;
-            line-height: 1.7;
+        /* About Section */
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 700px;
         }
 
-        .project-description {
-            margin-bottom: 1.5rem;
+        /* Projects Grid */
+        .project-grid, .collab-grid, .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
         }
 
-        .project-links {
+        .project-card, .collab-card, .cert-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, border-color 0.2s ease;
             display: flex;
-            gap: 1rem;
+            flex-direction: column;
+        }
+
+        .project-card:hover, .collab-card:hover, .cert-card:hover {
+            transform: translateY(-4px);
+            border-color: #475569;
+        }
+
+        .project-img, .collab-img, .cert-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: var(--dark);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-img img, .collab-img img, .cert-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-img img, 
+        .collab-card:hover .collab-img img, 
+        .cert-card:hover .cert-img img {
+            transform: scale(1.03);
+        }
+
+        .project-content, .collab-content, .cert-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-title, .collab-title, .cert-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--light);
+            letter-spacing: -0.01em;
+        }
+
+        .project-desc, .collab-desc, .cert-desc {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .project-links, .collab-links, .cert-footer {
+            display: flex;
+            gap: 0.75rem;
             margin-top: auto;
         }
 
-        .project-links .btn {
-            padding: 0.75rem 1.8rem;
-            font-size: 0.95rem;
+        .collab-role {
+            display: inline-block;
+            color: var(--light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding: 0.25rem 0.75rem;
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .cert-issuer {
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Cert Actions Custom */
+        .cert-actions {
+            display: flex;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .btn-cert, .btn-cert-half {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--dark);
+            color: var(--light);
+            border: 1px solid var(--border);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .btn-cert-half {
+            flex: 1;
+        }
+
+        .btn-cert:hover, .btn-cert-half:hover {
+            background: var(--border);
+        }
+
+        .btn-cert svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
         }
 
         /* Contact Section */
         .contact {
-            background: var(--dark);
             text-align: center;
+            padding-bottom: 8rem;
         }
 
         .social-links {
-            margin-top: 2rem;
             display: flex;
-            gap: 1.2rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .social-links a {
-            display: inline-flex;
-            align-items: center;
-            padding: 1rem 2rem;
+            padding: 0.75rem 1.5rem;
             background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border);
             color: var(--light);
             text-decoration: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
         }
 
         .social-links a:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary);
-            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+            background: var(--border);
         }
 
         /* Footer */
         footer {
-            background: var(--card-bg);
-            padding: 2.5rem 5%;
+            padding: 2rem 5%;
             text-align: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--gray);
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.9rem;
         }
 
         footer p {
-            margin: 0;
+            margin: 0.5rem 0;
         }
 
         /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-30px) rotate(5deg);
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .project-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 2rem;
-            }
-
-            h1 {
-                font-size: 3rem;
-            }
-
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem 4%;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            .tagline {
-                font-size: 1.1rem;
-            }
-
-            .header-pfp {
-                width: 120px;
-                height: 120px;
-            }
-
-            section {
-                padding: 4rem 5%;
-            }
-
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card.featured {
-                grid-column: span 1;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links {
-                display: none;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-        }
-
-        /* Collab / Worked With Section */
-        .collab-section {
-            background: var(--dark);
-        }
-
-        .collab-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-            justify-content: start;
-        }
-
-        .collab-grid .collab-card {
-            max-width: 450px;
-        }
-
-        .collab-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .collab-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(37, 99, 235, 0.25);
-            border-color: var(--primary);
-        }
-
-        .collab-img {
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            position: relative;
-            background: #111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .collab-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .collab-card:hover .collab-img img {
-            transform: scale(1.08);
-        }
-
-        .collab-content {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
-
-        .collab-title {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--light);
-        }
-
-        .collab-desc {
-            color: var(--gray);
-            line-height: 1.7;
-            margin-bottom: 1.2rem;
-        }
-
-        .collab-role {
-            display: inline-block;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .collab-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: auto;
-        }
-
-        .collab-links .btn {
-            padding: 0.75rem 1.8rem;
-            font-size: 0.95rem;
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.1rem; }
+            section { padding: 4rem 1.5rem; }
+            
+            .cta-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
@@ -580,6 +390,7 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -587,9 +398,9 @@
     <!-- Header/Hero -->
     <header>
         <div class="header-content">
-            <img src="pfp.png" alt="Vidyut Prabakaran" class="header-pfp" />
+            <img src="assets/icons/pfp.png" alt="Vidyut Prabakaran" class="header-pfp" />
             <h1>Vidyut Prabakaran</h1>
-            <p class="tagline">Developer & Car enthusiast</p>
+            <p class="tagline">Teen Hobbyist Programmer</p>
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -601,9 +412,9 @@
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <p>Hi there! I'm Vidyut, a passionate hobbyist programmer with a deep love for both coding and automobiles.
-                When I'm not working on my latest programming project, you can find me reading about car specifications
-                or discussing the newest automotive technologies.</p>
+            <p>Hi there! I'm Vidyut, a programmer, computer hardware enthusiast, and a certified yoga teacher. Exploring
+                AI, Python, and more. When I'm not coding, or exploring tech, you can find me practicing yoga, listening
+                to music, or looking at cars.</p>
         </div>
     </section>
 
@@ -615,18 +426,15 @@
                 <!-- Featured project -->
                 <div class="project-card featured">
                     <div class="project-img">
-                        <img src="apm.png" alt="AI Password Manager" />
+                        <img src="assets/banners/apm.png" alt="AI Password Manager" />
                     </div>
                     <div class="project-content">
                         <div class="project-description">
                             <div>
                                 <h3 class="project-title">AI Password Manager</h3>
                                 <div class="project-desc">
-                                    <p>Secure Your Digital Life with AI Technology.</p>
                                     <p>Securely store and manage your passwords with the power of artificial
                                         intelligence.</p>
-                                    <p>Protects your digital credentials with advanced encryption and smart features.
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -642,7 +450,7 @@
                 <!-- Regular projects -->
                 <div class="project-card normal">
                     <div class="project-img">
-                        <img src="wl-whatsapp.png" alt="WL-WhatsApp" />
+                        <img src="assets/banners/wl-whatsapp.png" alt="WL-WhatsApp" />
                     </div>
                     <div class="project-content">
                         <div>
@@ -660,7 +468,7 @@
 
                 <div class="project-card normal">
                     <div class="project-img">
-                        <img src="vivobook-hackintosh.png" alt="VivoBook Hackintosh" />
+                        <img src="assets/banners/vivobook-hackintosh.png" alt="VivoBook Hackintosh" />
                     </div>
                     <div class="project-content">
                         <div>
@@ -679,7 +487,7 @@
 
                 <div class="project-card normal">
                     <div class="project-img">
-                        <img src="lnc.png" alt="LocalNet Chat" />
+                        <img src="assets/banners/lnc.png" alt="LocalNet Chat" />
                     </div>
                     <div class="project-content">
                         <div>
@@ -698,7 +506,7 @@
 
                 <div class="project-card normal">
                     <div class="project-img">
-                        <img src="xcli.png" alt="Xcel CLI" />
+                        <img src="assets/banners/xcli.png" alt="Xcel CLI" />
                     </div>
                     <div class="project-content">
                         <div>
@@ -717,11 +525,11 @@
 
                 <div class="project-card normal">
                     <div class="project-img">
-                        <img src="fpdf.png" alt="FusionPDF" />
+                        <img src="assets/banners/fpdf.png" alt="FusionPDF" />
                     </div>
                     <div class="project-content">
                         <div>
-                            <h3 class="project-title">Image to PDF</h3>
+                            <h3 class="project-title">FusionPDF</h3>
                             <div class="project-desc">
                                 <p>Quickly convert multiple images into a single PDF document.</p>
                             </div>
@@ -743,7 +551,7 @@
             <div class="collab-grid">
                 <div class="collab-card">
                     <div class="collab-img">
-                        <img src="ttt.png" alt="The Thinking Teens" />
+                        <img src="assets/banners/ttt.png" alt="The Thinking Teens" />
                     </div>
                     <div class="collab-content">
                         <div>
@@ -763,12 +571,12 @@
 
                 <div class="collab-card">
                     <div class="collab-img">
-                        <img src="nazarguide.png" alt="Nazar Guide [DEMO]" />
+                        <img src="assets/banners/nazarguide.png" alt="Nazar Guide [DEMO]" />
                     </div>
                     <div class="collab-content">
                         <div>
                             <h3 class="collab-title">Nazar Guide [DEMO]</h3>
-                            <p class="collab-desc">Nazar Guide [DEMO] is a voice based program with the intention to
+                            <p class="collab-desc">Nazar Guide [DEMO] is an AI voice based program with the intention to
                                 help blind people to traverse the world. In this demo it is only equipped with a
                                 singular route in suburban India.</p>
                             <br>
@@ -784,10 +592,68 @@
         </div>
     </section>
 
+    <!-- Certifications / Achievements Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <h2 class="section-title">Certifications &amp; Achievements</h2>
+            <div class="cert-grid">
+
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="assets/certificates/yttc.png" alt="Arogya Yogshala YTTC Certificate" />
+                    </div>
+                    <div class="cert-content">
+                        <p class="cert-issuer">Arogya Yogshala</p>
+                        <h3 class="cert-title">Yoga Teacher Training Certificate (YTTC - RYS 200)</h3>
+                        <p class="cert-desc">Completed a 200 Hour Yoga Teacher Training Course (YTTC) at Arogya
+                            Yogshala Institute. Looking forward to launch an online yoga course.</p>
+                        <div class="cert-footer">
+                            <a href="https://github.com/VidyutPrabakaran1/VidyutPrabakaran1/blob/main/assets/certificates/VIDYUT%20PRABAKARAN%20113%20APR26%20200Hours%20Yoga%20teacher%20Training%20Yoga%20Alliance%20Arogya%20Yogshala.jpg.jpeg"
+                                target="_blank" rel="noopener noreferrer" class="btn-cert">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="assets/certificates/cq.png" alt="Code Quest 2024 & 2026" />
+                    </div>
+                    <div class="cert-content">
+                        <p class="cert-issuer">CodeW/Floppy</p>
+                        <h3 class="cert-title">Code Quest 2024 & 2026</h3>
+                        <p class="cert-desc">Participated in and secured 2nd place in both competitions. Individual participation in 2024 and as a team member in 2026.</p>
+                        <div class="cert-footer">
+                            <div class="cert-actions">
+                                <a href="https://github.com/VidyutPrabakaran1/VidyutPrabakaran1/blob/main/assets/certificates/Certificate%20Of%20Achievement%20-%20Vidyut%20Prabakaran%20-%20Code%20Quest.png"
+                                    target="_blank" rel="noopener noreferrer" class="btn-cert btn-cert-half">
+                                    2024
+                                </a>
+                                <a href="https://github.com/VidyutPrabakaran1/VidyutPrabakaran1/blob/main/assets/certificates/Certificate%20Of%20Achievement%20-%20Vidyut%20Prabakaran%20-%20Code%20Quest%20-%20Scanned%20Copy.png"
+                                    target="_blank" rel="noopener noreferrer" class="btn-cert btn-cert-half">
+                                    2026
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Contact</h2>
             <div class="social-links">
                 <a href="mailto:vidyutprabakaran@gmail.com">Email Me</a>
                 <a href="https://github.com/VidyutPrabakaran1" target="_blank" rel="noopener noreferrer">GitHub</a>
