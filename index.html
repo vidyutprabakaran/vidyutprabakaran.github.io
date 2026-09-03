@@ -8,9 +8,11 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Vidyut Prabakaran — a teen hobbyist programmer, computer hardware enthusiast, and certified yoga teacher exploring AI, Python, and web development.">
+    <meta name="description"
+        content="Personal portfolio of Vidyut Prabakaran — a teen hobbyist programmer, computer hardware enthusiast, and certified yoga teacher exploring AI, Python, and web development.">
     <meta property="og:title" content="Vidyut Prabakaran | Developer">
-    <meta property="og:description" content="Personal portfolio of Vidyut Prabakaran — teen hobbyist programmer exploring AI, Python, and hardware.">
+    <meta property="og:description"
+        content="Personal portfolio of Vidyut Prabakaran — teen hobbyist programmer exploring AI, Python, and hardware.">
     <meta property="og:type" content="website">
     <meta name="google-site-verification" content="xqd1CqpdZuSuk1laTGsthXwmASxGdWZW-cZfXvXdHHM" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -195,13 +197,17 @@
         }
 
         /* Projects Grid */
-        .project-grid, .collab-grid, .cert-grid {
+        .project-grid,
+        .collab-grid,
+        .cert-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        .project-card, .collab-card, .cert-card {
+        .project-card,
+        .collab-card,
+        .cert-card {
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
@@ -211,12 +217,16 @@
             flex-direction: column;
         }
 
-        .project-card:hover, .collab-card:hover, .cert-card:hover {
+        .project-card:hover,
+        .collab-card:hover,
+        .cert-card:hover {
             transform: translateY(-4px);
             border-color: #475569;
         }
 
-        .project-img, .collab-img, .cert-img {
+        .project-img,
+        .collab-img,
+        .cert-img {
             width: 100%;
             aspect-ratio: 16 / 9;
             overflow: hidden;
@@ -227,27 +237,33 @@
             justify-content: center;
         }
 
-        .project-img img, .collab-img img, .cert-img img {
+        .project-img img,
+        .collab-img img,
+        .cert-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .project-card:hover .project-img img, 
-        .collab-card:hover .collab-img img, 
+        .project-card:hover .project-img img,
+        .collab-card:hover .collab-img img,
         .cert-card:hover .cert-img img {
             transform: scale(1.03);
         }
 
-        .project-content, .collab-content, .cert-content {
+        .project-content,
+        .collab-content,
+        .cert-content {
             padding: 1.5rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
-        .project-title, .collab-title, .cert-title {
+        .project-title,
+        .collab-title,
+        .cert-title {
             font-size: 1.25rem;
             font-weight: 600;
             margin-bottom: 0.75rem;
@@ -255,7 +271,9 @@
             letter-spacing: -0.01em;
         }
 
-        .project-desc, .collab-desc, .cert-desc {
+        .project-desc,
+        .collab-desc,
+        .cert-desc {
             color: var(--muted);
             font-size: 0.95rem;
             line-height: 1.6;
@@ -263,7 +281,9 @@
             flex-grow: 1;
         }
 
-        .project-links, .collab-links, .cert-footer {
+        .project-links,
+        .collab-links,
+        .cert-footer {
             display: flex;
             gap: 0.75rem;
             margin-top: auto;
@@ -296,7 +316,8 @@
             width: 100%;
         }
 
-        .btn-cert, .btn-cert-half {
+        .btn-cert,
+        .btn-cert-half {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -317,7 +338,8 @@
             flex: 1;
         }
 
-        .btn-cert:hover, .btn-cert-half:hover {
+        .btn-cert:hover,
+        .btn-cert-half:hover {
             background: var(--border);
         }
 
@@ -371,21 +393,49 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav { padding: 1rem 1.5rem; }
-            .nav-links { display: none; }
-            
-            h1 { font-size: 2.5rem; }
-            .tagline { font-size: 1.1rem; }
-            section { padding: 4rem 1.5rem; }
-            
-            .cta-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
-            .btn { width: 100%; }
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -445,8 +495,8 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://glace-apm.github.io/" target="_blank"
-                                class="btn btn-primary">View Project</a>
+                            <a href="https://glace-apm.github.io/" target="_blank" class="btn btn-primary">View
+                                Project</a>
                             <a href="https://github.com/VidyutPrabakaran1/Glace-APM" target="_blank"
                                 rel="noopener noreferrer" class="btn btn-outline">GitHub Repo</a>
                         </div>
@@ -454,23 +504,6 @@
                 </div>
 
                 <!-- Regular projects -->
-                <div class="project-card normal">
-                    <div class="project-img">
-                        <img src="assets/banners/wl-whatsapp.png" alt="WL-WhatsApp" />
-                    </div>
-                    <div class="project-content">
-                        <div>
-                            <h3 class="project-title">WL-WhatsApp</h3>
-                            <div class="project-desc">
-                                <p>A WhatsApp Desktop client for Linux, with the trust of opensource code.</p>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/VidyutPrabakaran1/WL-WhatsApp" target="_blank"
-                                class="btn btn-outline">GitHub Repo</a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="project-card normal">
                     <div class="project-img">
@@ -637,7 +670,8 @@
                     <div class="cert-content">
                         <p class="cert-issuer">CodeW/Floppy</p>
                         <h3 class="cert-title">Code Quest 2024 & 2026</h3>
-                        <p class="cert-desc">Participated in and secured 2nd place in both competitions. Individual participation in 2024 and as a team member in 2026.</p>
+                        <p class="cert-desc">Participated in and secured 2nd place in both competitions. Individual
+                            participation in 2024 and as a team member in 2026.</p>
                         <div class="cert-footer">
                             <div class="cert-actions">
                                 <a href="https://github.com/VidyutPrabakaran1/VidyutPrabakaran1/blob/main/assets/certificates/Certificate%20Of%20Achievement%20-%20Vidyut%20Prabakaran%20-%20Code%20Quest.png"
@@ -669,7 +703,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Vidyut Prabakaran. All rights reserved. | <a href="privacy.html" style="color: var(--muted); text-decoration: underline;">Privacy Policy</a></p>
+        <p>&copy; 2026 Vidyut Prabakaran. All rights reserved. | <a href="privacy.html"
+                style="color: var(--muted); text-decoration: underline;">Privacy Policy</a></p>
         <p>Website built with Claude & Gemini</p>
     </footer>
 
